@@ -1,0 +1,11 @@
+﻿<Window x:Class="PrintCatSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+    <StackPanel>
+      <Button Name="rgb_balance_btn" Content="色彩平衡" Click="rgb_balance_Click"></Button>
+      <Button Name="color_slider_btn" Content="Color Slider" Click="color_slider_btn_Click"/>
+    </StackPanel>
+  </Grid>
+</Window>
