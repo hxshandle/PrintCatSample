@@ -1,0 +1,22 @@
+﻿<Window x:Class="PrintCatSample.ColorBalanceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:l="clr-namespace:PrintCatSample.UI"
+        Title="ColorBalanceWindow" Height="500" Width="500">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*"></ColumnDefinition>
+      <ColumnDefinition Width="150"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+    <Image x:Name="theImage" Source="Assert/Gril_1920X1080.jpg" Grid.Column="0"/>
+    <Border Grid.Column="1">
+      <StackPanel Margin="10">
+        <Button x:Name="reset" Content="重置" Click="reset_Click"></Button>
+        <Slider x:Name="RSlider" Minimum="-100" Value="0" Maximum="100" Style="{DynamicResource SliderStyle1}" Margin="0 10" l:SliderColorProperties.LeftColor="Cyan" l:SliderColorProperties.RightColor="Red" ValueChanged="Slider_ValueChanged"/>
+        <Slider x:Name="GSlider" Minimum="-100" Value="0" Maximum="100" Style="{DynamicResource SliderStyle1}" Margin="0 10" l:SliderColorProperties.LeftColor="Magenta" l:SliderColorProperties.RightColor="Green" ValueChanged="Slider_ValueChanged"/>
+        <Slider x:Name="BSlider" Minimum="-100" Value="0" Maximum="100" Style="{DynamicResource SliderStyle1}" Margin="0 10" l:SliderColorProperties.LeftColor="Yellow" l:SliderColorProperties.RightColor="Blue" ValueChanged="Slider_ValueChanged"/>
+      </StackPanel>
+    </Border>
+
+  </Grid>
+</Window>

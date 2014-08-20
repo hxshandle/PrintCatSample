@@ -27,7 +27,8 @@ namespace PrintCatSample
 
     private void rgb_balance_Click(object sender, RoutedEventArgs e)
     {
-
+      Window win = new ColorBalanceWindow();
+      win.Show();
     }
 
     private void color_slider_btn_Click(object sender, RoutedEventArgs e)
