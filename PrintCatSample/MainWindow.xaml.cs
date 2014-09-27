@@ -36,5 +36,11 @@ namespace PrintCatSample
       Window win = new ColorSliderWindow();
       win.Show();
     }
+
+    private void printer_btn_Click(object sender, RoutedEventArgs e)
+    {
+      Window win = new PrinterWindows();
+      win.Show();
+    }
   }
 }

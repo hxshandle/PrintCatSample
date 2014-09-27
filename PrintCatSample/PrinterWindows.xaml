@@ -1,0 +1,11 @@
+﻿<Window x:Class="PrintCatSample.PrinterWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PrinterWindows" Height="416" Width="543"
+        Loaded="Window_Loaded"
+        >
+  <StackPanel>
+    <Image x:Name="theImage" Source="Assert/Gril_1920X1080.jpg"/>
+    <Button Content="Print" Click="Print_Click" Height="50"/>
+  </StackPanel>
+</Window>
