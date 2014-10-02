@@ -51,6 +51,10 @@ namespace PrintCatSample
         printDlg.PrintTicket.PageMediaSize = new PageMediaSize(PageMediaSizeName.NorthAmerica4x6);
         //printDlg.PrintQueue.DefaultPrintTicket.PageOrientation = PageOrientation.Landscape;
         printDlg.PrintTicket.PageOrientation = PageOrientation.Landscape;
+        Console.WriteLine("wwwwwwwwwwwwww->" + printDlg.PrintableAreaWidth);
+        Console.WriteLine("hhhhhhhhhhhhhhh->" + printDlg.PrintableAreaHeight);
+        Console.WriteLine("W-> "+printDlg.PrintTicket.PageMediaSize.Width);
+        Console.WriteLine("H-> "+printDlg.PrintTicket.PageMediaSize.Height);
         //printDlg.PrintQueue.DefaultPrintTicket.PageOrientation = PageOrientation.Portrait;
         /*
         XpsDocumentWriter docWriter = PrintQueue.CreateXpsDocumentWriter(printDlg.PrintQueue);
@@ -62,7 +66,21 @@ namespace PrintCatSample
         }
         docWriter.Write(visual, ticket);
         */
-        printDlg.PrintVisual(theImage, "My First Print Job");
+        Size size = new Size(printDlg.PrintableAreaWidth, printDlg.PrintableAreaHeight);
+        StackPanel stackPanel = new StackPanel { Orientation = Orientation.Vertical, RenderSize = size };
+
+        //TextBlock title = new TextBlock { Text = @"Form", FontSize = 20 };
+        //stackPanel.Children.Add(title);
+
+        Image image = new Image { Source = this.theImage.Source, Stretch = Stretch.Uniform };
+        image.RenderTransform = new ScaleTransform(1, 1);
+        stackPanel.Children.Add(image);
+
+        stackPanel.Measure(size);
+        stackPanel.Arrange(new Rect(new Point(0, 0), stackPanel.DesiredSize));
+
+        printDlg.PrintVisual(stackPanel, @"Form image");
+        //printDlg.PrintVisual(theImage, "My First Print Job");
       }
     }
   }

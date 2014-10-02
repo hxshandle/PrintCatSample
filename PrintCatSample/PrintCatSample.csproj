@@ -66,6 +66,9 @@
     <Compile Include="PrinterWindows.xaml.cs">
       <DependentUpon>PrinterWindows.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RotateWindow.xaml.cs">
+      <DependentUpon>RotateWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\SliderColorProperties.cs" />
     <Compile Include="Utils\ImageHandler.cs" />
     <Compile Include="Utils\ImageHelper.cs" />
@@ -93,6 +96,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="PrinterWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RotateWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -7,6 +7,7 @@
       <Button Name="rgb_balance_btn" Content="色彩平衡" Click="rgb_balance_Click"></Button>
       <Button Name="color_slider_btn" Content="Color Slider" Click="color_slider_btn_Click"/>
       <Button Name="printr_btn" Content="Printer" Click="printer_btn_Click"/>
+      <Button Name="rotate_btn" Content="Rotate" Click="rotate_btn_Click"/>
     </StackPanel>
   </Grid>
 </Window>

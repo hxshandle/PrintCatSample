@@ -42,5 +42,11 @@ namespace PrintCatSample
       Window win = new PrinterWindows();
       win.Show();
     }
+
+    private void rotate_btn_Click(object sender, RoutedEventArgs e)
+    {
+      Window win = new RotateWindow();
+      win.Show();
+    }
   }
 }
